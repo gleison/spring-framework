@@ -89,7 +89,7 @@ class MergePlugin implements Plugin<Project> {
 
 	private void setup(Project project) {
 		project.merge.into.dependencies.add("merging", project)
-		project.dependencies.add("provided", project.merge.into.sourceSets.main.output)
+		project.dependencies.add("compile", project.merge.into.sourceSets.main.output)
 		project.dependencies.add("runtimeMerge", project.merge.into)
 		setupTaskDependencies(project)
 		setupMaven(project)

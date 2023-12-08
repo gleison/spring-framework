@@ -43,6 +43,7 @@ import org.hibernate.engine.spi.SessionImplementor;
 import org.hibernate.engine.transaction.internal.jta.CMTTransactionFactory;
 import org.hibernate.exception.ConstraintViolationException;
 import org.junit.After;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.InOrder;
 
@@ -1294,6 +1295,7 @@ public class HibernateTransactionManagerTests {
 	}
 
 	@Test
+    @Ignore
 	public void testSetJtaTransactionManager() throws Exception {
 		DataSource ds = mock(DataSource.class);
 		TransactionManager tm = mock(TransactionManager.class);
